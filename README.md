@@ -212,34 +212,50 @@ namespace WindowsFormsApp2
 }
 Программа 4: 
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace практика_1
+namespace WindowsFormsApp2
 {
-    class Program
+    public partial class Form1 : Form
     {
-        static void Main(string[] args)
+        public Form1()
         {
-            double x = 0.0;
-            double y = 0.0;
-            Console.WriteLine("Введите Х:");
-            double.TryParse(Console.ReadLine(), out x);
-            Console.WriteLine("Введите Y:");
-            double.TryParse(Console.ReadLine(), out y);
-            if (x * x + y * y < 100 && x * x + y * y > 25 && y >= 0)
-            {
-                Console.WriteLine("Точка находится внути закрашенной области");
-            }
-            else if (x * x + y * y == 100 || x * x + y * y == 25 && y >= 0)
-            {
-                Console.WriteLine("Точка находится на границе закрашенной области");
-            }
-            else
-            {
-                Console.WriteLine("Точка находится ВНЕ закрашенной области");
-            }
-
-
-            Console.ReadKey();
+            InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+
+        { 
+		string str="";
+            for (int j = 1; j <= 5; j++)
+            {
+                for (int i = -10; i <= 12; i++)
+                    {
+                    str +=(" " + i);
+                    }
+               str +=(" \n")
+            }
+            MessageBox.Show(str);
+
+
+        }
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
